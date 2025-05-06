@@ -1907,3 +1907,18 @@ section,
     height: 66vh;
   }
 }
+
+.about-section-heading{
+  color: var(--accent-color);
+}
+
+.about-section-card{
+  background-color: #F9F9F9;
+  padding: 20px;
+  margin: 20px;
+}
+
+.about-section-card-heading{
+  color: var(--accent-color);
+  font-weight: 600;
+}
