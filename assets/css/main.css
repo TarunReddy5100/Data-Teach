@@ -1148,7 +1148,8 @@ section,
 }
 
 .features .features-item img {
-  width: 40px;
+  /* width: 60px; */
+  height: 35px;
   padding-right: 20px;
 }
 
