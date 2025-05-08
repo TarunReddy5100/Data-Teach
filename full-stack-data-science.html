@@ -84,7 +84,7 @@
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
               <h1>Data Science Full Stack</h1>
-              <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+              <!-- <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p> -->
             </div>
           </div>
         </div>
@@ -220,6 +220,113 @@
 
     </section>
     <!-- course features -->
+
+    <!-- Curriculam -->
+    <!-- <section>
+      <div class="container">
+        <h2 class="course-feature-heading">Course Curriculam</h2>
+        <div class="curriculam-container">
+
+          <div class="col-lg-6 col-md-12">
+            <div class="curriculam-item">
+              <button class="curriculam-dropdown-btn">
+                curriculum
+                <span class="arrow"></span>
+              </button>
+              <div class="curriculam-dropdown-container">
+                <ul>
+                  <li>curriculam 1</li>
+                  <li>curriculam 2</li>
+                  <li>curriculam 3</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-6 col-md-12">
+            <div class="curriculam-item">
+              <button class="curriculam-dropdown-btn">
+                curriculum
+                <span class="arrow"></span>
+              </button>
+              <div class="curriculam-dropdown-container">
+                <ul>
+                  <li>curriculam 1</li>
+                  <li>curriculam 2</li>
+                  <li>curriculam 3</li>
+                </ul>
+              </div>
+            </div>
+          </div>  
+
+          <div class="col-lg-6 col-md-12">
+            <div class="curriculam-item">
+              <button class="curriculam-dropdown-btn">
+                curriculum
+                <span class="arrow"></span>
+              </button>
+              <div class="curriculam-dropdown-container">
+                <ul>
+                  <li>curriculam 1</li>
+                  <li>curriculam 2</li>
+                  <li>curriculam 3</li>
+                </ul>
+              </div>
+            </div>
+          </div>  
+
+          <div class="col-lg-6 col-md-12">
+            <div class="curriculam-item">
+              <button class="curriculam-dropdown-btn">
+                curriculum
+                <span class="arrow"></span>
+              </button>
+              <div class="curriculam-dropdown-container">
+                <ul>
+                  <li>curriculam 1</li>
+                  <li>curriculam 2</li>
+                  <li>curriculam 3</li>
+                </ul>
+              </div>
+            </div>
+          </div>  
+
+          <div class="col-lg-6 col-md-12">
+            <div class="curriculam-item">
+              <button class="curriculam-dropdown-btn">
+                curriculum
+                <span class="arrow"></span>
+              </button>
+              <div class="curriculam-dropdown-container">
+                <ul>
+                  <li>curriculam 1</li>
+                  <li>curriculam 2</li>
+                  <li>curriculam 3</li>
+                </ul>
+              </div>
+            </div>
+          </div>  
+
+        </div>
+      </div>
+    </section> -->
+    <script>
+      document.querySelectorAll('.curriculam-dropdown-btn').forEach(button => {
+      button.addEventListener('click', () => {
+          button.classList.toggle('active');
+          const dropdownContent = button.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+          } else {
+              dropdownContent.style.display = "block";
+          }
+  
+          const arrow = button.querySelector('.arrow');
+          arrow.classList.toggle('rotate');
+              });
+          });
+    </script>
+    <!-- Curriculam -->
 
   </main>
 

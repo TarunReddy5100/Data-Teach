@@ -563,7 +563,7 @@ h6 {
 }
 
 @media (min-width: 1000px) {
-  .footer-about{
+  .footer-about {
     padding-right: 100px;
   }
 }
@@ -1585,7 +1585,7 @@ section,
     border-color: var(--accent-color);
   }
 
-  .tabs .nav-tabs{
+  .tabs .nav-tabs {
     flex-direction: row !important;
   }
 }
@@ -1927,8 +1927,6 @@ section,
   /* Add your styles here */
 }
 
-
-
 @media (min-width: 1000px) {
   .cards-container-scroll {
     overflow-x: scroll;
@@ -1936,22 +1934,22 @@ section,
   }
 }
 
-.about-section-heading{
+.about-section-heading {
   color: var(--accent-color);
 }
 
-.about-section-card{
-  background-color: #F9F9F9;
+.about-section-card {
+  background-color: #f9f9f9;
   padding: 20px;
   margin: 20px;
 }
 
-.about-section-card-heading{
+.about-section-card-heading {
   color: var(--accent-color);
   font-weight: 600;
 }
 
-.course-feature{
+.course-feature {
   text-align: center;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -1959,20 +1957,67 @@ section,
   margin: 10px;
 }
 
-.course-feature-heading{
+.course-feature-heading {
   text-align: center;
   color: var(--accent-color);
   margin-bottom: 20px;
 }
-.course-feature-img{
+.course-feature-img {
   width: 50px;
   margin-bottom: 20px;
 }
 
-.course-feature-text{
+.course-feature-text {
   font-size: 18px;
   margin-bottom: 0;
 }
-.course-feature-sub-text{
+.course-feature-sub-text {
   font-size: 16;
+}
+
+.curriculam-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+@media (max-width: 1000px) {
+  
+}
+.curriculam-item {
+  width: 100%;
+  padding: 10px;
+}
+.curriculam-dropdown-btn {
+  width: 100%;
+  background-color: #f9f9f9;
+  color: #800090;
+  padding: 15px;
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.arrow {
+  border: solid #800090;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transition: transform 0.5s;
+  margin-left: 10px;
+}
+.curriculam-dropdown-container {
+  display: none;
+  padding: 0 15px;
+  overflow: hidden;
+  transition: 3.5s;
+  background-color: #f9f9f9;
+}
+.arrow.rotate {
+  transform: rotate(45deg);
 }
