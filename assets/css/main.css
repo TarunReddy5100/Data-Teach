@@ -1582,7 +1582,11 @@ section,
 
   .tabs .nav-link.active {
     color: var(--accent-color);
-    background: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+
+  .tabs .nav-tabs{
+    flex-direction: row !important;
   }
 }
 
