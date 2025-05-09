@@ -1949,6 +1949,19 @@ section,
   font-weight: 600;
 }
 
+.course-feature-container{
+  width: 25%;
+}
+@media (max-width: 1000px) {
+  .course-feature-container{
+    width: 50%;
+  }
+}
+@media (max-width: 460px) {
+  .course-feature-container{
+    width: 100%;
+  }
+}
 .course-feature {
   text-align: center;
   border: 1px solid #ddd;
@@ -1982,11 +1995,13 @@ section,
   padding: 20px;
 }
 @media (max-width: 1000px) {
-  
+  .curriculam-item {
+    width: 100% !important;
+  }
 }
 .curriculam-item {
-  width: 100%;
   padding: 10px;
+  width: 50%;
 }
 .curriculam-dropdown-btn {
   width: 100%;
@@ -2009,7 +2024,7 @@ section,
   transition: max-height 1.0s ease;
   background-color: #f9f9f9;
   padding: 0 15px;
-  
+  width: 100%;
 }
 .arrow {
   border: solid #800090;
