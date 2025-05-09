@@ -222,6 +222,121 @@
     </section>
     <!-- course features -->
 
+    <!-- Curriculam -->
+    <section>
+      <div class="container">
+        <h2 class="course-feature-heading">Course Curriculam</h2>
+        <div class="curriculam-container">
+
+          <div class="col-lg-6 col-md-12">
+            <div class="curriculam-item">
+              <button class="curriculam-dropdown-btn">
+                PYTHON PROGRAMMING
+                <span class="arrow"></span>
+              </button>
+              <div class="curriculam-dropdown-container">
+                <ul>
+                  <li>Introduction</li>
+                  <li>Data Types & Data Structures</li>
+                  <li>Control Flow & Conditional Statements</li>
+                  <li>Functions and Modules</li>
+                  <li>Class and Objects</li>
+                  <li>File Handling</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-6 col-md-12">
+            <div class="curriculam-item">
+              <button class="curriculam-dropdown-btn">
+                DATA ANALYSIS USING PYTHON
+                <span class="arrow"></span>
+              </button>
+              <div class="curriculam-dropdown-container">
+                <ul>
+                  <li>Numpy - Numerical Python</li>
+                  <li>Data Manipulation with Pandas</li>
+                  <li>Data Visualization Using Matplotlib And Seaborn</li>
+                  <li>Exploratory Data Analysis (EDA)</li>
+                  <li>UNSTRUCTURED DATA PROCESSING</li>
+                  <li>Project (web - scraping)</li>
+                </ul>
+              </div>
+            </div>
+          </div>  
+
+          <div class="col-lg-6 col-md-12">
+            <div class="curriculam-item">
+              <button class="curriculam-dropdown-btn">
+                STATISTICS
+                <span class="arrow"></span>
+              </button>
+              <div class="curriculam-dropdown-container">
+                <!-- <ul>
+                  <li>curriculam 1</li>
+                  <li>curriculam 2</li>
+                  <li>curriculam 3</li>
+                </ul> -->
+              </div>
+            </div>
+          </div>  
+
+          <div class="col-lg-6 col-md-12">
+            <div class="curriculam-item">
+              <button class="curriculam-dropdown-btn">
+                SQL
+                <span class="arrow"></span>
+              </button>
+              <div class="curriculam-dropdown-container">
+                <ul>
+                  <li>Introduction to Basic Database Concepts</li>
+                  <li>Introduction to SQL</li>
+                  <li>Writing Basic SQL Statement</li>
+                  <li>Restricting and Sorting Data</li>
+                  <li>Advance DDL Commands</li>
+                  <li>Working on DML statements</li>
+                  <li>Use of built-in function in SQL</li>
+                  <li>Working on multiple tables and Retrieve records from multiple tables</li>
+                  <li>Working on subqueries</li>
+                  <li>Python with MYSQL</li>
+                </ul>
+              </div>
+            </div>
+          </div>  
+
+          <div class="col-lg-6 col-md-12">
+            <div class="curriculam-item">
+              <button class="curriculam-dropdown-btn">
+                POWER BI
+                <span class="arrow"></span>
+              </button>
+              <div class="curriculam-dropdown-container">
+                <!-- <ul>
+                  <li>curriculam 1</li>
+                  <li>curriculam 2</li>
+                  <li>curriculam 3</li>
+                </ul> -->
+              </div>
+            </div>
+          </div> 
+
+        </div>
+      </div>
+    </section>
+    <script>
+      document.querySelectorAll('.curriculam-dropdown-btn').forEach(button => {
+        button.addEventListener('click', () => {
+          const dropdownContent = button.nextElementSibling;
+          const arrow = button.querySelector('.arrow');
+
+          dropdownContent.classList.toggle('show');
+          arrow.classList.toggle('rotate');
+        });
+      });
+    </script>
+    <!-- Curriculam -->
+
   </main>
 
   <footer id="footer" class="footer position-relative light-background">

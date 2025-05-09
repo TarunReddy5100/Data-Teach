@@ -2003,6 +2003,13 @@ section,
   justify-content: space-between;
   align-items: center;
 }
+.curriculam-dropdown-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.0s ease;
+  background-color: #f9f9f9;
+  padding: 0 15px;
+}
 .arrow {
   border: solid #800090;
   border-width: 0 2px 2px 0;
@@ -2011,15 +2018,11 @@ section,
   transition: transform 0.5s;
   margin-left: 10px;
 }
-.curriculam-dropdown-container {
-  display: none;
-  padding: 0 15px;
-  overflow: hidden;
-  transition: 3.5s;
-  background-color: #f9f9f9;
-}
 .arrow.rotate {
   transform: rotate(45deg);
+}
+.curriculam-dropdown-container.show {
+  max-height: 1000px;
 }
 
 .home-image{
