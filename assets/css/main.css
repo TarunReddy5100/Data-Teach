@@ -2021,3 +2021,7 @@ section,
 .arrow.rotate {
   transform: rotate(45deg);
 }
+
+.home-image{
+  height: 100vh;
+}
