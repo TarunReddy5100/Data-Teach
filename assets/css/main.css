@@ -2041,7 +2041,7 @@ section,
   max-height: 1000px;
 }
 
-.sample-certificate-container{
+.sample-certificate-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2054,4 +2054,103 @@ section,
     width: 100%;
     margin: 10px auto;
   }
+}
+
+/*  */
+.landing-page-heading {
+  color: var(--accent-color);
+}
+.feature-box {
+  background-color: #f3e6f3;
+  padding: 12px 20px;
+  border-radius: 10px;
+  color: var(--accent-color);
+  font-size: small;
+  font-weight: 500;
+  border: 1px solid #d5c1e2;
+}
+.form-container {
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards 0.1s;
+}
+.form-container::before{
+  border-radius: 10px;
+  content: '';
+  background-image: linear-gradient(to bottom, #3acfd5 0%, #3a4ed5 100%);
+  top: -2px;
+  left: -2px;
+  bottom: -2px;
+  right: -2px;
+}
+.form-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.form-control {
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(128, 0, 128, 0.25);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.btn-submit {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: white;
+  padding: 0.8rem;
+  border-radius: 5px;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.terms {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 1rem;
+}
+.illustration {
+  position: absolute;
+  right: 250px;
+  bottom: 20px;
+  width: 80vh;
+  opacity: 0;
+  animation: fadeIn 0.9s forwards 0.9s;
+  z-index: -1;
 }

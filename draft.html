@@ -1,317 +1,727 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Science Course</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #800080;
-            --primary-light: #9c27b0;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8f9fa;
-        }
-        
-        .hero-section {
-            padding: 3rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .content-wrapper {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .course-title {
-            color: var(--primary-color);
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-        }
-        
-        .feature-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        
-        .feature-list li {
-            margin-bottom: 0.8rem;
-            position: relative;
-            padding-left: 30px;
-        }
-        
-        .feature-list li:before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 5px;
-            width: 20px;
-            height: 20px;
-            border: 2px solid var(--primary-color);
-            border-radius: 4px;
-        }
-        
-        .feature-list li[aria-checked="true"]:before {
-            background-color: var(--primary-color);
-            content: "✓";
-            color: white;
-            text-align: center;
-            line-height: 16px;
-            font-size: 12px;
-        }
-        
-        .certification-badge {
-            margin-top: 2rem;
-            padding-top: 1rem;
-            border-top: 1px dashed #ccc;
-        }
-        
-        .highlight-text {
-            font-size: 1.2rem;
-            color: var(--primary-color);
-            font-weight: 600;
-            margin: 1.5rem 0;
-        }
-        
-        .upcoming-batch {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            display: inline-block;
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-container {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            padding: 2rem;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeUp 0.8s forwards 0.3s;
-            position: relative;
-            z-index: 3;
-        }
-        
-        .form-control {
-            border-radius: 5px;
-            padding: 0.8rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ddd;
-        }
-        
-        .form-control:focus {
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 0.25rem rgba(128, 0, 128, 0.25);
-        }
-        
-        .btn-primary {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-            padding: 0.8rem 2rem;
-            border-radius: 5px;
-            font-weight: 600;
-            width: 100%;
-            margin-top: 1rem;
-        }
-        
-        .btn-primary:hover {
-            background-color: var(--primary-light);
-            border-color: var(--primary-light);
-        }
-        
-        .terms-text {
-            font-size: 0.8rem;
-            color: #666;
-            margin-top: 1rem;
-        }
-        
-        .illustration-container {
-            position: relative;
-            /* height: 100%; */
-            opacity: 0;
-            transform: translateY(100px);
-            animation: riseUp 0.8s forwards 0.8s;
-            z-index: 2;
-            margin-right: -50px;
-        }
-        
-        .illustration-bg {
-            position: absolute;
-            top: -50px;
-            left: -50px;
-            right: -50px;
-            bottom: -200px;
-            background: linear-gradient(135deg, rgba(128,0,128,0.1) 0%, rgba(156,39,176,0.2) 100%);
-            border-radius: 20px;
-            z-index: 1;
-        }
-        
-        .illustration-img {
-            position: relative;
-            max-width: 100%;
-            height: auto;
-            z-index: 2;
-        }
-        
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes riseUp {
-            from {
-                opacity: 0;
-                transform: translateY(100px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @media (max-width: 992px) {
-            .illustration-container {
-                margin-right: 0;
-                margin-top: 2rem;
-                text-align: center;
-            }
-            
-            .illustration-bg {
-                top: -20px;
-                left: -20px;
-                right: -20px;
-                bottom: -20px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <section class="hero-section">
-        <div class="container content-wrapper">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="course-title">Data Science Course</h1>
-                    
-                    <ul class="feature-list">
-                        <li aria-checked="false">Live Instructor-led Classes</li>
-                        <li aria-checked="true">Job Application Portal</li>
-                        <li aria-checked="true">Project-based Learning</li>
-                        <li aria-checked="true">Industry Interaction</li>
-                    </ul>
-                    
-                    <div class="certification-badge">
-                        <p>A Certified Member of</p>
-                        <p><strong>WASSCOM</strong></p>
-                        <p><strong>+1%CACA</strong></p>
-                    </div>
-                    
-                    <p class="highlight-text">Upgrade your skill set & unlock new opportunities!</p>
-                    
-                    <div class="upcoming-batch">
-                        Upcoming Cohort: 31 May 2025
-                    </div>
-                </div>
-                
-                <div class="col-lg-6">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="illustration-container">
-                                <div class="illustration-bg"></div>
-                                <!-- Girl illustration - using an SVG placeholder -->
-                                <!-- <svg class="illustration-img" width="300" height="400" viewBox="0 0 300 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="150" cy="100" r="60" fill="#FFD5C2"/>
-                                    <path d="M150 160L130 260H170L150 160Z" fill="#FFD5C2"/>
-                                    <path d="M130 260L120 400H180L170 260" fill="#800080"/>
-                                    <path d="M90 220L30 180" stroke="black" stroke-width="3"/>
-                                    <path d="M210 220L270 180" stroke="black" stroke-width="3"/>
-                                    <path d="M120 180L180 180" stroke="black" stroke-width="2"/>
-                                    <path d="M140 140L160 140" stroke="black" stroke-width="2"/>
-                                    <circle cx="130" cy="90" r="10" fill="white"/>
-                                    <circle cx="170" cy="90" r="10" fill="white"/>
-                                    <circle cx="130" cy="90" r="5" fill="black"/>
-                                    <circle cx="170" cy="90" r="5" fill="black"/>
-                                    <path d="M140 120L160 120" stroke="black" stroke-width="2" stroke-linecap="round"/>
-                                    <rect x="100" y="260" width="100" height="60" rx="5" fill="#6A1B9A"/>
-                                    <rect x="110" y="270" width="80" height="40" rx="2" fill="#4A148C"/>
-                                    <line x1="110" y1="290" x2="190" y2="290" stroke="#7E57C2" stroke-width="2"/>
-                                    <line x1="130" y1="270" x2="130" y2="310" stroke="#7E57C2" stroke-width="2"/>
-                                    <line x1="150" y1="270" x2="150" y2="310" stroke="#7E57C2" stroke-width="2"/>
-                                    <line x1="170" y1="270" x2="170" y2="310" stroke="#7E57C2" stroke-width="2"/>
-                                </svg> -->
-                                <img src="assets/img/Header Form Image-1.webp" alt="">
-                            </div>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="form-container">
-                                <h3 class="mb-4">Get Course Details</h3>
-                                <form>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <input type="text" class="form-control" placeholder="First name*" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <input type="text" class="form-control" placeholder="Last name*" required>
-                                        </div>
-                                    </div>
-                                    <input type="email" class="form-control" placeholder="Email*" required>
-                                    
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <select class="form-control">
-                                                <option>India (+91)</option>
-                                                <option>USA (+1)</option>
-                                                <option>UK (+44)</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <input type="tel" class="form-control" placeholder="Phone Number">
-                                        </div>
-                                    </div>
-                                    
-                                    <select class="form-control">
-                                        <option>Year of Graduation*</option>
-                                        <option>2025</option>
-                                        <option>2024</option>
-                                        <option>2023</option>
-                                        <option>2022 or earlier</option>
-                                    </select>
-                                    
-                                    <select class="form-control">
-                                        <option>Work Experience Level*</option>
-                                        <option>Fresher</option>
-                                        <option>0-2 years</option>
-                                        <option>2-5 years</option>
-                                        <option>5+ years</option>
-                                    </select>
-                                    
-                                    <button type="submit" class="btn btn-primary">Request a Callback</button>
-                                    
-                                    <p class="terms-text">By providing your contact details, you agree to our <strong>Dassar Bank</strong>.</p>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>DataTeach</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="DataTeach.ai" />
+  <link rel="manifest" href="assets/favicon/site.webmanifest" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="assets/img/DT Logo.png" alt="">
+        <!-- <h1 class="sitename">Mentor</h1> -->
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="active">Home<br></a></li>
+          <li><a href="about.html">About</a></li>
+          <!-- <li><a href="courses.html">Courses</a></li> -->
+          <li class="dropdown"><a href="courses.html"><span>Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="full-stack-data-science.html">Full Stack Data Science</a></li>
+              <li><a href="data-analytics-course.html">Data Analytics</a></li>
+              <li><a href="artificial-intelligence-course.html">Artificial Intelligence</a></li>
+              <li><a href="python-full-stack-course.html">Python Full Stack Development</a></li>
+              <li><a href="java-full-stack-development.html">Java Full Stack Development</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="#">Login</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <div class="container py-5">
+      <div class="row justify-content-between">
+        
+        <!-- Left Content -->
+        <div class="col-lg-5 mt-5">
+          <div class="d-flex align-items-center mb-3">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" width="25">
+            <span class="ms-2">⭐️⭐️⭐️⭐️⭐️ 4.6 | <a href="#">1,539 Reviews</a></span>
+          </div>
+          <h1 class="display-5 fw-bold landing-page-heading">Data Science Course</h1>
+    
+          <div class="row mt-4">
+            <div class="col-6 mb-3">
+              <div class="feature-box"><i class="bi bi-check-circle-fill me-2"></i>Live instructor-led Classes</div>
+            </div>
+            <div class="col-6 mb-3">
+              <div class="feature-box"><i class="bi bi-check-circle-fill me-2"></i>Job Application Portal</div>
+            </div>
+            <div class="col-6 mb-3">
+              <div class="feature-box"><i class="bi bi-check-circle-fill me-2"></i>Project-based Learning</div>
+            </div>
+            <div class="col-6 mb-3">
+              <div class="feature-box"><i class="bi bi-check-circle-fill me-2"></i>Industry Interaction</div>
+            </div>
+          </div>
+    
+          <!-- <p class="mt-4 ">A Certified Member of
+            <span>
+              <img src="assets/img/homepage icons/Numpy logo.png" alt="certs" width="40" class="mx-3"> 
+            </span>
+          </p> -->
+          
+        </div>
+    
+        <!-- Right Form -->
+        <div class="col-lg-7 d-flex">
+          <img src="assets/img/landing page image.png" alt="Girl illustration" class="illustration">
+          <div class="form-container">
+              <h3 class="form-title">Get Course Details</h3>
+              <form>
+                  <div class="row">
+                      <div class="col-md-6">
+                          <input type="text" class="form-control" placeholder="First name*" required>
+                      </div>
+                      <div class="col-md-6">
+                          <input type="text" class="form-control" placeholder="Last name*" required>
+                      </div>
+                  </div>
+                  <input type="email" class="form-control" placeholder="Email*" required>
+                  
+                  <div class="row">
+                      <div class="col-md-4">
+                          <select class="form-control">
+                              <option>(+91) India</option>
+                              <option>(+1) USA</option>
+                              <option> (+44) UK</option>
+                          </select>
+                      </div>
+                      <div class="col-md-8">
+                          <input type="tel" class="form-control" placeholder="Phone Number">
+                      </div>
+                  </div>
+                  
+                  <select class="form-control">
+                      <option>Year of Graduation*</option>
+                      <option>2025</option>
+                      <option>2024</option>
+                      <option>2023</option>
+                      <option>2022 or earlier</option>
+                  </select>
+                  
+                  <select class="form-control">
+                      <option>Work Experience Level*</option>
+                      <option>Fresher</option>
+                      <option>0-2 years</option>
+                      <option>2-5 years</option>
+                      <option>5+ years</option>
+                  </select>
+                  
+                  <button type="submit" class="btn-submit">Request a Callback</button>
+                  
+                  <p class="terms">By providing your contact details, you agree to our <a href="privacy-policy.html">Privacy policy</a>.</p>
+              </form>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <!-- /Hero Section -->
+
+    <!-- About Section -->
+    <!-- <section id="about" class="about section my-5">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <h2 class="about-section-heading text-center">Affordable AI Online Courses and Learning Opportunities</h2>
+
+          <div class="d-flex  justify-content-between align-items-center">
+
+            <div class="about-section-card text-center">
+              <h4 class="about-section-card-heading">Internships</h4>
+              <p>Learning top skills can bring an extra-ordinary outcome and growth  in a career.</p>
+              <a href="#">Start Now!</a>
+            </div>
+
+            <div class="about-section-card text-center">
+              <h4 class="about-section-card-heading">Workshops</h4>
+              <p>Everyone prefers to enjoy learning at their own pace & that gives a great result.</p>
+              <a href="#">Start Now!</a>
+            </div>
+
+            <div class="about-section-card text-center">
+              <h4 class="about-section-card-heading">Projects</h4>
+              <p>Experienced Engineers can assist in learning faster with their best approaches!</p>
+              <a href="#">Start Now!</a>
+            </div>
+
+            <div class="about-section-card text-center">
+              <h4 class="about-section-card-heading">CRT</h4>
+              <p>Equips Students with the skills and knowledge required for job Market.</p>
+              <a href="#">Start Now!</a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section> --><!-- /About Section -->
+
+      <img src="assets/img/DATA SCIENCE Roadmap 2025_DE (1).png" class="w-100 home-image my-5" alt="">
+
+    <!-- Counts Section -->
+    <section id="counts" class="section counts light-background">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="1232" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Students</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Courses</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Events</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Trainers</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Counts Section -->
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="section why-us">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="why-box">
+              <h3>Why Choose DataTeach.ai</h3>
+              <p>
+                DataTeach.ai is an affordable, hands-on education platform for learning data science, AI, and full-stack development.
+                It offers beginner to advanced courses with real-world projects and internship opportunities.
+                Designed for accessibility and job readiness, it helps learners build practical, industry-relevant skills.                
+              </p>
+              <div class="text-center">
+                <a href="#" class="more-btn"><span>Learn More</span> <i class="bi bi-chevron-right"></i></a>
+              </div>
+            </div>
+          </div><!-- End Why Box -->
+
+          <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="row gy-4 cards-container-scroll" data-aos="fade-up" data-aos-delay="200">
+
+              <div class="col-xl-4">
+                <div class="icon-box d-flex flex-column align-items-center">
+                  <!-- <i class="bi bi-clipboard-data"></i> -->
+                  <img src="assets/img/homepage icons/PracticalHands-OnLearningicon.png" alt="Practical, Hands-On Learning">
+                  <h4>Practical, Hands-On Learning</h4>
+                  <p>DataTeach.ai often emphasizes real-world data science, machine learning, and AI applications. Their curriculum may be designed to teach what’s relevant in industry today—not just theory, but how to apply it.</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-xl-4">
+                <div class="icon-box d-flex flex-column align-items-center">
+                  <!-- <i class="bi bi-gem"></i> -->
+                   <img src="assets/img/homepage icons/BeginnertoAdvancedOfferingsicon.png" alt="Beginner to Advanced Offerings">
+                  <h4>Beginner to Advanced Offerings</h4>
+                  <p>We typically cater to a wide audience—from absolute beginners to professionals looking to upskill or switch careers into data science, analytics, or AI.</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-xl-4">
+                <div class="icon-box d-flex flex-column align-items-center">
+                  <!-- <i class="bi bi-inboxes"></i> -->
+                   <img src="assets/img/homepage icons/AffordableorFreeEducationicon.png" alt="Affordable or Free Education">
+                  <h4>Affordable or Free Education</h4>
+                  <p>DataTeach.ai has offered free or low-cost courses, lowering the barrier to entry compared to many bootcamps or degree programs.</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-xl-4">
+                <div class="icon-box d-flex flex-column align-items-center">
+                  <!-- <i class="bi bi-clipboard-data"></i> -->
+                   <img src="assets/img/homepage icons/Community-DrivenApproachicon.png" alt="Community-Driven Approach">
+                  <h4>Community-Driven Approach</h4>
+                  <p>We often promote a collaborative learning environment, including community projects, peer learning, and mentorship, which helps learners stay engaged and grow faster.</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-xl-4">
+                <div class="icon-box d-flex flex-column align-items-center">
+                  <!-- <i class="bi bi-gem"></i> -->
+                   <img src="assets/img/homepage icons/Project-BasedPortfolioDevelopmenticon.png" alt="Project-Based Portfolio Development">
+                  <h4>Project-Based Portfolio Development</h4>
+                  <p>Participants may graduate with a portfolio of projects, which is crucial for landing jobs in data-related roles. These often include Kaggle-style competitions, capstone projects, or open-source contributions.</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-xl-4">
+                <div class="icon-box d-flex flex-column align-items-center">
+                  <!-- <i class="bi bi-inboxes"></i> -->
+                   <img src="assets/img/homepage icons/Industry-RelevantCurriculumicon.png" alt="Industry-Relevant Curriculum">
+                  <h4>Industry-Relevant Curriculum</h4>
+                  <p>The content is often designed in alignment with what employers actually seek: Python, SQL, machine learning, data visualization, cloud tools, and more.</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-xl-4">
+                <div class="icon-box d-flex flex-column align-items-center">
+                  <!-- <i class="bi bi-inboxes"></i> -->
+                   <img src="assets/img/homepage icons/JobReadinessandCareerSupporticon.png" alt="Job Readiness and Career Support">
+                  <h4>Job Readiness and Career Support</h4>
+                  <p>We offer career guidance, resume support, interview prep, and connections to hiring partners or internships.</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Why Us Section -->
+
+    <!-- Features Section -->
+    <section id="features" class="features section light-background py-5">
+
+      <div class="container">
+
+        <h2 class="about-section-heading text-center mb-5" data-aos="fade-up" data-aos-delay="100">Tools You'll Learn</h2>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="features-item">
+              <!-- <i class="bi bi-eye" style="color: #ffbb2c;"></i> -->
+              <img src="assets/img/homepage icons/tensorflowlogo.png" alt="tensorflowlogo">
+              <h3 class="stretched-link">TensorFlow</h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="features-item">
+              <!-- <i class="bi bi-infinity" style="color: #5578ff;"></i> -->
+              <img src="assets/img/homepage icons/statisticslogo.png" alt="statisticslogo">
+              <h3 class="stretched-link">Statistics</h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="features-item">
+              <!-- <i class="bi bi-mortarboard" style="color: #e80368;"></i> -->
+              <img src="assets/img/homepage icons/sqllogo.png" alt="sqllogo">
+              <h3 class="stretched-link">Sql</h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="features-item">
+              <!-- <i class="bi bi-nut" style="color: #e361ff;"></i> -->
+              <img src="assets/img/homepage icons/seaborn-seeklogo.png" alt="seaborn-seek">
+              <h3 class="stretched-link">Seaborn Seek</h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="features-item">
+              <!-- <i class="bi bi-shuffle" style="color: #47aeff;"></i> -->
+              <img src="assets/img/homepage icons/scikit-learn-logo.png" alt="scikit-learn-logo">
+              <h3 class="stretched-link">Scikit Learn</h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="features-item">
+              <!-- <i class="bi bi-star" style="color: #ffa76e;"></i> -->
+              <img src="assets/img/homepage icons/regex-logo.png" alt="regex-logo">
+              <h3 class="stretched-link">Regex</h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="700">
+            <div class="features-item">
+              <!-- <i class="bi bi-x-diamond" style="color: #11dbcf;"></i> -->
+               <img src="assets/img/homepage icons/python logo.png" alt="python logo">
+              <h3 class="stretched-link">Python</h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="800">
+            <div class="features-item">
+              <!-- <i class="bi bi-camera-video" style="color: #4233ff;"></i> -->
+               <img src="assets/img/homepage icons/powerbilogo.png" alt="powerbilogo">
+              <h3 class="stretched-link">Powerbi</h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="900">
+            <div class="features-item">
+              <!-- <i class="bi bi-command" style="color: #b2904f;"></i> -->
+               <img src="assets/img/homepage icons/plottylogo.jpeg" alt="plottylogo">
+              <h3 class="stretched-link">Plotty</h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1000">
+            <div class="features-item">
+              <!-- <i class="bi bi-dribbble" style="color: #b20969;"></i> -->
+               <img src="assets/img/homepage icons/Pandas logo.png" alt="Pandas logo">
+              <h3 class="stretched-link">Pandas</h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1100">
+            <div class="features-item">
+              <!-- <i class="bi bi-activity" style="color: #ff5828;"></i> -->
+               <img src="assets/img/homepage icons/opencvlogo.png" alt="opencvlogo">
+              <h3 class="stretched-link">Opencv</h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1200">
+            <div class="features-item">
+              <!-- <i class="bi bi-brightness-high" style="color: #29cc61;"></i> -->
+               <img src="assets/img/homepage icons/openailogo.png" alt="openailogo">
+              <h3 class="stretched-link">Openai</h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1300">
+            <div class="features-item">
+              <!-- <i class="bi bi-camera-video" style="color: #4233ff;"></i> -->
+               <img src="assets/img/homepage icons/Numpy logo.png" alt="Numpy logo">
+              <h3 class="stretched-link">Numpy</h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1400">
+            <div class="features-item">
+              <!-- <i class="bi bi-command" style="color: #b2904f;"></i> -->
+               <img src="assets/img/homepage icons/ntlk logo.png" alt="ntlk logo">
+              <h3 class="stretched-link">Ntik</h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1500">
+            <div class="features-item">
+              <!-- <i class="bi bi-dribbble" style="color: #b20969;"></i> -->
+               <img src="assets/img/homepage icons/matplotlib logo.png" alt="matplotlib logo">
+              <h3 class="stretched-link">Matplotlib</h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1600">
+            <div class="features-item">
+              <!-- <i class="bi bi-activity" style="color: #ff5828;"></i> -->
+               <img src="assets/img/homepage icons/keras logo.png" alt="keras logo">
+              <h3 class="stretched-link">Keras</h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1700">
+            <div class="features-item">
+              <!-- <i class="bi bi-brightness-high" style="color: #29cc61;"></i> -->
+               <img src="assets/img/homepage icons/jupyterlogo.png" alt="jupyterlogo">
+              <h3 class="stretched-link">Jupyter</h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Features Section -->
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Courses</h2>
+        <p>Popular Courses</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-2 mt-md-0" data-aos="zoom-in" data-aos-delay="100">
+            <div class="course-item">
+              <img src="assets/img/courses/datascienceimage.jpg" class="img-fluid" alt="Data Science">
+              <div class="course-content">
+                <!-- <div class="d-flex justify-content-between align-items-center mb-3">
+                  <p class="category">Web Development</p>
+                  <p class="price">$169</p>
+                </div> -->
+
+                <h3><a href="course-details.html">Full Stack Data Science</a></h3>
+                <p class="description">Master the entire data science workflow — from data analysis to machine learning and model deployment.
+                  This course covers Python, SQL, Power BI, ML, NLP, CV, Gen AI, Prompt Engineering, and real-time projects.
+                  Includes a 2-month internship and placement training to get you job-ready</p>
+                <!-- <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center">
+                    <img src="assets/img/trainers/trainer-1-2.jpg" class="img-fluid" alt="">
+                    <a href="" class="trainer-link">Antonio</a>
+                  </div>
+                  <div class="trainer-rank d-flex align-items-center">
+                    <i class="bi bi-person user-icon"></i>&nbsp;50
+                    &nbsp;&nbsp;
+                    <i class="bi bi-heart heart-icon"></i>&nbsp;65
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div> <!-- End Course Item-->
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="course-item">
+              <img src="assets/img/courses/pythonprogramming.jpg.png" class="img-fluid" alt="Python">
+              <div class="course-content">
+
+                <h3><a href="course-details.html">Python Full Stack Development</a></h3>
+                <p class="description">Learn to build dynamic web applications using Python, Django, HTML, CSS, JavaScript, and databases.
+                  Ideal for beginners aiming to become full stack developers with in-demand skills.</p>
+              </div>
+            </div>
+          </div> <!-- End Course Item-->
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+            <div class="course-item">
+              <img src="assets/img/courses/javaprogramming.png" class="img-fluid" alt="Java">
+              <div class="course-content">
+
+                <h3><a href="course-details.html">Java Full Stack Development</a></h3>
+                <p class="description">Master front-end to back-end development using Java, Spring Boot, HTML, CSS, JavaScript, and databases.
+                  Perfect for those aiming to build powerful, enterprise-level applications.</p>
+              </div>
+            </div>
+          </div> <!-- End Course Item-->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Courses Section -->
+
+    <!-- Trainers Index Section -->
+    <!-- <section id="trainers-index" class="section trainers-index">
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <img src="assets/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>Walter White</h4>
+                <span>Web Development</span>
+                <p>
+                  Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                </p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <img src="assets/img/trainers/trainer-2.jpg" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>Sarah Jhinson</h4>
+                <span>Marketing</span>
+                <p>
+                  Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
+                </p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <img src="assets/img/trainers/trainer-3.jpg" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>William Anderson</h4>
+                <span>Content</span>
+                <p>
+                  Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
+                </p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section> -->
+    <!-- /Trainers Index Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+
+        <div class="col-lg-5 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">DataTeach.ai</span>
+            <!-- <img src="assets/img/DT Logo.png" alt="Logo"> -->
+          </a>
+          <div>
+            <p>Working to bring significant changes in online-based learning by doing extensive research for course curriculum preparation, student engagements, and looking forward to the flexible education!</p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href="https://youtube.com/@datateach?si=zlYci72c8r_3u45T" target="_blank"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61565533684055" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/datateach.ai?igsh=MTAwMTVlMzVzbmVibg==" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/datateach-ai/" target="_blank"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 footer-links">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="privacy-policy.html">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-3 footer-links">
+          <h4>Address</h4>
+          <div class="footer-contact pt-3">
+            <a href="https://maps.app.goo.gl/rKkn81o4YRDz7xcA9" target="_blank">
+              <p>3rd floor, Hno-221 MIG, Road no-2, KPHB Phase-I,</p>
+              <p>Manyavar Building, Kukatpally,</p>
+              <p>Hyderabad, Telangana, 500085.</p>
+            </a>
+            <p class="mt-3"><a href="tel:+919885946789" target="_blank"><strong>Phone:</strong> <span>+91 9885946789</span></a></p>
+            <p><a href="mailto:info@datateach.ai" target="_blank"><strong>Email:</strong> <span>info@datateach.ai</span></a></p>
+          </div>
+        </div>
+
+        <!-- <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Our Newsletter</h4>
+          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+          <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+          </form>
+        </div> -->
+
+      </div>
+    </div>
+
+    <div class="container-fluid copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">DataTeach.ai</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
