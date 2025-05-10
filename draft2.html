@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science Course</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #800080;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 15px;
+        }
+        
+        .course-header {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        
+        .feature-list {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+        
+        .feature-list li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .feature-list li:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--primary-color);
+            border-radius: 4px;
+        }
+        
+        .feature-list li[aria-checked="true"]:before {
+            background-color: var(--primary-color);
+            content: "✓";
+            color: white;
+            text-align: center;
+            line-height: 16px;
+            font-size: 12px;
+        }
+        
+        .certification {
+            margin: 2rem 0;
+            padding-top: 1rem;
+            border-top: 1px dashed #ccc;
+            font-size: 0.9rem;
+        }
+        
+        .highlight {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin: 1.5rem 0;
+        }
+        
+        .batch-date {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+        
+        .form-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.6s forwards 0.3s;
+        }
+        
+        .form-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+        
+        .form-control {
+            border-radius: 5px;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25rem rgba(128, 0, 128, 0.25);
+        }
+        
+        .btn-submit {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+            padding: 0.8rem;
+            border-radius: 5px;
+            font-weight: 600;
+            width: 100%;
+            margin-top: 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        
+        .terms {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 1rem;
+        }
+        
+        .illustration {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 300px;
+            opacity: 0;
+            animation: fadeIn 0.6s forwards 0.6s;
+        }
+        
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @media (max-width: 992px) {
+            .illustration {
+                position: relative;
+                margin-top: 2rem;
+                width: 100%;
+                max-width: 300px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h1 class="course-header">Data Science Course</h1>
+                
+                <ul class="feature-list">
+                    <li aria-checked="false">Live Instructor-led Classes</li>
+                    <li aria-checked="true">Job Application Portal</li>
+                    <li aria-checked="true">Project-based Learning</li>
+                    <li aria-checked="true">Industry Interaction</li>
+                </ul>
+                
+                <div class="certification">
+                    <p>A Certified Member of</p>
+                    <p><strong>WASSCOM</strong></p>
+                    <p><strong>+1%CACA</strong></p>
+                </div>
+                
+                <p class="highlight">Upgrade your skill set & unlock new opportunities!</p>
+                
+                <div class="batch-date">
+                    Upcoming Cohort: 31 May 2025
+                </div>
+            </div>
+            
+            <div class="col-lg-6 position-relative">
+                <div class="form-container">
+                    <h3 class="form-title">Get Course Details</h3>
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="First name*" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Last name*" required>
+                            </div>
+                        </div>
+                        <input type="email" class="form-control" placeholder="Email*" required>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <select class="form-control">
+                                    <option>India (+91)</option>
+                                    <option>USA (+1)</option>
+                                    <option>UK (+44)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="tel" class="form-control" placeholder="Phone Number">
+                            </div>
+                        </div>
+                        
+                        <select class="form-control">
+                            <option>Year of Graduation*</option>
+                            <option>2025</option>
+                            <option>2024</option>
+                            <option>2023</option>
+                            <option>2022 or earlier</option>
+                        </select>
+                        
+                        <select class="form-control">
+                            <option>Work Experience Level*</option>
+                            <option>Fresher</option>
+                            <option>0-2 years</option>
+                            <option>2-5 years</option>
+                            <option>5+ years</option>
+                        </select>
+                        
+                        <button type="submit" class="btn-submit">Request a Callback</button>
+                        
+                        <p class="terms">By providing your contact details, you agree to our <strong>Dassar Bank</strong>.</p>
+                    </form>
+                </div>
+                
+                <!-- Girl illustration placeholder - replace with your image -->
+                <img src="assets/img/Header Form Image-1.webp" alt="Girl illustration" class="illustration">
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

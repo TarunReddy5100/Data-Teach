@@ -1,217 +1,317 @@
-<div class="col-lg-6 col-md-12">
-  <div class="curriculam-item">
-    <button class="curriculam-dropdown-btn">
-      PYTHON PROGRAMMING
-      <span class="arrow"></span>
-    </button>
-    <div class="curriculam-dropdown-container">
-      <ul>
-        <li>Introduction</li>
-        <li>Data Types & Data Structures</li>
-        <li>Control Flow & Conditional Statements</li>
-        <li>Functions and Modules</li>
-        <li>Class and Objects</li>
-        <li>File Handling</li>
-      </ul>
-    </div>
-  </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science Course</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #800080;
+            --primary-light: #9c27b0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .hero-section {
+            padding: 3rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .content-wrapper {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .course-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .feature-list li:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--primary-color);
+            border-radius: 4px;
+        }
+        
+        .feature-list li[aria-checked="true"]:before {
+            background-color: var(--primary-color);
+            content: "✓";
+            color: white;
+            text-align: center;
+            line-height: 16px;
+            font-size: 12px;
+        }
+        
+        .certification-badge {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px dashed #ccc;
+        }
+        
+        .highlight-text {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin: 1.5rem 0;
+        }
+        
+        .upcoming-batch {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s forwards 0.3s;
+            position: relative;
+            z-index: 3;
+        }
+        
+        .form-control {
+            border-radius: 5px;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25rem rgba(128, 0, 128, 0.25);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            font-weight: 600;
+            width: 100%;
+            margin-top: 1rem;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-light);
+            border-color: var(--primary-light);
+        }
+        
+        .terms-text {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 1rem;
+        }
+        
+        .illustration-container {
+            position: relative;
+            /* height: 100%; */
+            opacity: 0;
+            transform: translateY(100px);
+            animation: riseUp 0.8s forwards 0.8s;
+            z-index: 2;
+            margin-right: -50px;
+        }
+        
+        .illustration-bg {
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            right: -50px;
+            bottom: -200px;
+            background: linear-gradient(135deg, rgba(128,0,128,0.1) 0%, rgba(156,39,176,0.2) 100%);
+            border-radius: 20px;
+            z-index: 1;
+        }
+        
+        .illustration-img {
+            position: relative;
+            max-width: 100%;
+            height: auto;
+            z-index: 2;
+        }
+        
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes riseUp {
+            from {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .illustration-container {
+                margin-right: 0;
+                margin-top: 2rem;
+                text-align: center;
+            }
+            
+            .illustration-bg {
+                top: -20px;
+                left: -20px;
+                right: -20px;
+                bottom: -20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero-section">
+        <div class="container content-wrapper">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="course-title">Data Science Course</h1>
+                    
+                    <ul class="feature-list">
+                        <li aria-checked="false">Live Instructor-led Classes</li>
+                        <li aria-checked="true">Job Application Portal</li>
+                        <li aria-checked="true">Project-based Learning</li>
+                        <li aria-checked="true">Industry Interaction</li>
+                    </ul>
+                    
+                    <div class="certification-badge">
+                        <p>A Certified Member of</p>
+                        <p><strong>WASSCOM</strong></p>
+                        <p><strong>+1%CACA</strong></p>
+                    </div>
+                    
+                    <p class="highlight-text">Upgrade your skill set & unlock new opportunities!</p>
+                    
+                    <div class="upcoming-batch">
+                        Upcoming Cohort: 31 May 2025
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="illustration-container">
+                                <div class="illustration-bg"></div>
+                                <!-- Girl illustration - using an SVG placeholder -->
+                                <!-- <svg class="illustration-img" width="300" height="400" viewBox="0 0 300 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="150" cy="100" r="60" fill="#FFD5C2"/>
+                                    <path d="M150 160L130 260H170L150 160Z" fill="#FFD5C2"/>
+                                    <path d="M130 260L120 400H180L170 260" fill="#800080"/>
+                                    <path d="M90 220L30 180" stroke="black" stroke-width="3"/>
+                                    <path d="M210 220L270 180" stroke="black" stroke-width="3"/>
+                                    <path d="M120 180L180 180" stroke="black" stroke-width="2"/>
+                                    <path d="M140 140L160 140" stroke="black" stroke-width="2"/>
+                                    <circle cx="130" cy="90" r="10" fill="white"/>
+                                    <circle cx="170" cy="90" r="10" fill="white"/>
+                                    <circle cx="130" cy="90" r="5" fill="black"/>
+                                    <circle cx="170" cy="90" r="5" fill="black"/>
+                                    <path d="M140 120L160 120" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                                    <rect x="100" y="260" width="100" height="60" rx="5" fill="#6A1B9A"/>
+                                    <rect x="110" y="270" width="80" height="40" rx="2" fill="#4A148C"/>
+                                    <line x1="110" y1="290" x2="190" y2="290" stroke="#7E57C2" stroke-width="2"/>
+                                    <line x1="130" y1="270" x2="130" y2="310" stroke="#7E57C2" stroke-width="2"/>
+                                    <line x1="150" y1="270" x2="150" y2="310" stroke="#7E57C2" stroke-width="2"/>
+                                    <line x1="170" y1="270" x2="170" y2="310" stroke="#7E57C2" stroke-width="2"/>
+                                </svg> -->
+                                <img src="assets/img/Header Form Image-1.webp" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-container">
+                                <h3 class="mb-4">Get Course Details</h3>
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="First name*" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="Last name*" required>
+                                        </div>
+                                    </div>
+                                    <input type="email" class="form-control" placeholder="Email*" required>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <select class="form-control">
+                                                <option>India (+91)</option>
+                                                <option>USA (+1)</option>
+                                                <option>UK (+44)</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="tel" class="form-control" placeholder="Phone Number">
+                                        </div>
+                                    </div>
+                                    
+                                    <select class="form-control">
+                                        <option>Year of Graduation*</option>
+                                        <option>2025</option>
+                                        <option>2024</option>
+                                        <option>2023</option>
+                                        <option>2022 or earlier</option>
+                                    </select>
+                                    
+                                    <select class="form-control">
+                                        <option>Work Experience Level*</option>
+                                        <option>Fresher</option>
+                                        <option>0-2 years</option>
+                                        <option>2-5 years</option>
+                                        <option>5+ years</option>
+                                    </select>
+                                    
+                                    <button type="submit" class="btn btn-primary">Request a Callback</button>
+                                    
+                                    <p class="terms-text">By providing your contact details, you agree to our <strong>Dassar Bank</strong>.</p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="col-lg-6 col-md-12">
-  <div class="curriculam-item">
-    <button class="curriculam-dropdown-btn">
-      DATA ANALYSIS USING PYTHON
-      <span class="arrow"></span>
-    </button>
-    <div class="curriculam-dropdown-container">
-      <ul>
-        <li>Numpy - Numerical Python</li>
-        <li>Data Manipulation with Pandas</li>
-        <li>Data Visualization Using Matplotlib And Seaborn</li>
-        <li>Exploratory Data Analysis (EDA)</li>
-        <li>UNSTRUCTURED DATA PROCESSING</li>
-        <li>Project (web - scraping)</li>
-      </ul>
-    </div>
-  </div>
-</div>  
-
-<div class="col-lg-6 col-md-12">
-  <div class="curriculam-item">
-    <button class="curriculam-dropdown-btn">
-      STATISTICS
-      <span class="arrow"></span>
-    </button>
-    <div class="curriculam-dropdown-container">
-      <ul>
-        <li>Vectors</li>
-        <li>Matrices</li>
-        <li>Linear Equation</li>
-        <li>Vector Norms</li>
-        <li>Calculus</li>
-        <li>Central Tendency</li>
-        <li>Sample V/S Population</li>
-        <li>Probability</li>
-        <li>Types of Distribution</li>
-        <li>Central Limit Theorm</li>
-        <li>Hypothesis Testing</li>
-        <li>Types of Test</li>
-        <li>Anova Test</li>
-        <li>Skewness & Kurtosis</li>
-      </ul>
-    </div>
-  </div>
-</div>  
-
-<div class="col-lg-6 col-md-12">
-  <div class="curriculam-item">
-    <button class="curriculam-dropdown-btn">
-      SQL
-      <span class="arrow"></span>
-    </button>
-    <div class="curriculam-dropdown-container">
-      <ul>
-        <li>Introduction to Basic Database Concepts</li>
-        <li>Introduction to SQL</li>
-        <li>Writing Basic SQL Statement</li>
-        <li>Restricting and Sorting Data</li>
-        <li>Advance DDL Commands</li>
-        <li>Working on DML statements</li>
-        <li>Use of built-in function in SQL</li>
-        <li>Working on multiple tables and Retrieve records from multiple tables</li>
-        <li>Working on subqueries</li>
-        <li>Python with MYSQL</li>
-      </ul>
-    </div>
-  </div>
-</div>  
-
-<div class="col-lg-6 col-md-12">
-  <div class="curriculam-item">
-    <button class="curriculam-dropdown-btn">
-      POWER BI
-      <span class="arrow"></span>
-    </button>
-    <div class="curriculam-dropdown-container">
-      <ul>
-        <li>Intro to Power BI</li>
-        <li>Basic Charts in Power BI</li>
-        <li>Maps in Power BI</li>
-        <li>Tabular Data in Power BI</li>
-        <li>Cards in Power BI</li>
-        <li>Filters in Power BI</li>
-        <li>Slicers in Power BI</li>
-        <li>Advance Chart in Power BI</li>
-        <li>Inserting Object in Power BI</li>
-        <li>BookMark Action in Power BI</li>
-        <li>Creating Report in Power BI</li>
-        <li>Publishing Report in Power BI</li>
-        <li>Service Dashboard in Power BI</li>
-        <li>Refreshing Data in Power BI and Scheduling</li>
-        <li>Using Text Functions, Date Functions, Number Functions in Power Query</li>
-        <li>Appending and Merging Sheet</li>
-        <li>Columns from example in power query, Conditional ColumnsN</li>
-        <li>Data Modelling in Power BI</li>
-        <li>Connecting to MySql</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div class="col-lg-6 col-md-12">
-  <div class="curriculam-item">
-    <button class="curriculam-dropdown-btn">
-      MACHINE LEARNING
-      <span class="arrow"></span>
-    </button>
-    <div class="curriculam-dropdown-container">
-      <ul>
-        <li>Introduction</li>
-        <li>Supervised Learning</li>
-        <li>Regression Metrics</li>
-        <li>classification Methods</li>
-        <li>Classification Metrics</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div class="col-lg-6 col-md-12">
-  <div class="curriculam-item">
-    <button class="curriculam-dropdown-btn">
-      DEEP LEARNING
-      <span class="arrow"></span>
-    </button>
-    <div class="curriculam-dropdown-container">
-      <ul>
-        <li>Introduction to Deep Learning</li>
-        <li>Neural Network Architecture and Activation Functions</li>
-        <li>Forward and Backward Propagation</li>
-        <li>Optimizers</li>
-        <li>Keras Hands-on - Regression and Classification</li>
-      </ul>
-    </div>
-  </div>
-</div> 
-
-<div class="col-lg-6 col-md-12">
-  <div class="curriculam-item">
-    <button class="curriculam-dropdown-btn">
-      COMPUTER VISION
-      <span class="arrow"></span>
-    </button>
-    <div class="curriculam-dropdown-container">
-      <ul>
-        <li>Intro to Images and Image Preprocessing with OpenCV</li>
-        <li>Image Preprocessing with OpenCV</li>
-        <li>Intro to Convolutional Neural Network</li>
-        <li>Image Classification Case Study</li>
-        <li>CNN Architecture</li>
-        <li>Transfer Learning</li>
-        <li>Case Study with Transfer Learning</li>
-        <li>Object Detection</li>
-        <li>YOLO - Case Study</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div class="col-lg-6 col-md-12">
-  <div class="curriculam-item">
-    <button class="curriculam-dropdown-btn">
-      NATURAL LANGUAGE PROCESSING
-      <span class="arrow"></span>
-    </button>
-    <div class="curriculam-dropdown-container">
-      <ul>
-        <li>Introduction to text and Text Preprocessing with nltk and spacy</li>
-        <li>Vectorization Techniques</li>
-        <li>Project - Text Classification</li>
-        <li>RNNs</li>
-        <li>Project - Sequence Tagging</li>
-        <li>LSTMs</li>
-        <li>Auto Encoders</li>
-        <li>Project - Auto Encoders</li>
-        <li>Transformer and Attention</li>
-        <li>BERT</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div class="col-lg-6 col-md-12">
-  <div class="curriculam-item">
-    <button class="curriculam-dropdown-btn">
-      GEN AI
-      <span class="arrow"></span>
-    </button>
-    <div class="curriculam-dropdown-container">
-      <ul>
-        <li>Intro To Gen AI</li>
-        <li>Intro To LLM</li>
-        <li>Prompt Engineering and Working with LLM</li>
-        <li>Open AI</li>
-      </ul>
-    </div>
-  </div>
-</div>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

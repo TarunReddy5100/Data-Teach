@@ -2044,6 +2044,7 @@ section,
 .sample-certificate-container{
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .sample-certificate-img {
   width: 60%;
