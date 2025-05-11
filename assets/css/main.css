@@ -2158,7 +2158,7 @@ section,
   position: absolute;
   width: 50vh;
   height: 70vh;
-  background-image: url('../img/landing-page-image.png');
+  background-image: url("../img/landing-page-image.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -2178,3 +2178,107 @@ section,
   padding-right: 50px;
 }
 
+@media screen and (max-width: 1399px) {
+  .illustration {
+    width: 50vh;
+    height: 70vh;
+  }
+  .form-container {
+    width: 50vh;
+  }
+  .feature-box {
+    padding: 12px 10px;
+    font-weight: 400; 
+  }
+}
+@media (max-width: 1199px){
+  .illustration {
+    width: 40vh;
+    height: 60vh;
+  }
+  .illustration-text {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-top: 100%;
+    padding-right: 75px;
+  }
+  .form-container {
+    width: 50vh;
+  }
+  .feature-box-container{
+    width: 100%;
+  }
+  .feature-box {
+    padding: 12px 10px;
+    font-weight: 400;
+  }
+}
+@media (max-width:992px){
+  .illustration {
+    width: 40vh;
+    height: 60vh;
+    margin-top: 50px;
+  }
+  .form-container {
+    width: 70vh;
+    margin-top: 50px;
+  }
+}
+@media (max-width:769px){
+  .illustration {
+    width: 40vh;
+    height: 70vh;
+    margin-top: 50px;
+  }
+  .form-container {
+    width: 45vh;
+    margin-top: 50px;
+  }
+  .illustration-text {
+    margin-top: 120%;
+  }
+}
+@media(width: 768px){
+  .form-container {
+    width: 70vh;
+    margin-top: 50px;
+  }
+  .illustration-text {
+    margin-top: 120%;
+  }
+}
+@media (max-width:530px){
+  .feature-box {
+    padding: 12px 20px;
+    font-weight: 500;
+  }
+  .illustration {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    background-image: url("../img/landing-page-image-center.png");
+    animation: fadeUp 0.9s forwards 0s;
+  }
+  .illustration-text {
+    margin-top: 90%;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 0 3vh;
+  }
+  .form-container {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .form-illustration-container{
+    flex-direction: column;
+  }
+}
+@media (max-width:530px){
+  .illustration-text {
+    margin-top: 90%;
+    font-weight: bold;
+    font-size: 1.7rem;
+    padding: 0 3vh;
+  }
+}
