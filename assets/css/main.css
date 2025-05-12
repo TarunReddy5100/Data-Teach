@@ -2157,7 +2157,7 @@ section,
 .illustration {
   position: absolute;
   width: 50vh;
-  height: 70vh;
+  /* height: 70vh; */
   background-image: url("../img/landing-page-image.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -2175,16 +2175,16 @@ section,
   font-size: 1.5rem;
   font-weight: bold;
   margin-top: 90%;
-  padding-right: 50px;
+  padding-right: 10vh;
 }
 
 @media screen and (max-width: 1399px) {
   .illustration {
     width: 50vh;
-    height: 70vh;
+    /* height: 70vh; */
   }
   .form-container {
-    width: 50vh;
+    width: 60vh;
   }
   .feature-box {
     padding: 12px 10px;
@@ -2194,7 +2194,7 @@ section,
 @media (max-width: 1199px){
   .illustration {
     width: 40vh;
-    height: 60vh;
+    /* height: 60vh; */
   }
   .illustration-text {
     font-size: 1.2rem;
@@ -2216,7 +2216,7 @@ section,
 @media (max-width:992px){
   .illustration {
     width: 40vh;
-    height: 60vh;
+    /* height: 60vh; */
     margin-top: 50px;
   }
   .form-container {
@@ -2227,7 +2227,7 @@ section,
 @media (max-width:769px){
   .illustration {
     width: 40vh;
-    height: 70vh;
+    /* height: 70vh; */
     margin-top: 50px;
   }
   .form-container {
