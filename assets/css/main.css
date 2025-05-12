@@ -2196,11 +2196,11 @@ section,
 }
 @media screen and (max-width: 1281px) {
   .illustration {
-    width: 50vh;
+    width: 60vh;
     /* height: 70vh; */
   }
   .form-container {
-    width: 50vh;
+    width: 60vh;
   }
   .feature-box {
     padding: 12px 10px;
