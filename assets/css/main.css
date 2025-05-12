@@ -2194,6 +2194,22 @@ section,
     padding-right: 5vh;
   }
 }
+@media screen and (max-width: 1281px) {
+  .illustration {
+    width: 50vh;
+    /* height: 70vh; */
+  }
+  .form-container {
+    width: 50vh;
+  }
+  .feature-box {
+    padding: 12px 10px;
+    font-weight: 400;
+  }
+  .illustration-text {
+    padding-right: 10vh;
+  }
+}
 @media (max-width: 1199px) {
   .illustration {
     width: 40vh;
