@@ -761,7 +761,7 @@ h6 {
   bottom: 15px;
 }
 
-.whatapp-icons{
+.whatapp-icons {
   position: fixed;
   right: 17px;
   bottom: 100px;
@@ -769,12 +769,12 @@ h6 {
   width: 44px;
   height: 44px;
   font-size: 40px;
-  color: #25D366;
+  color: #25d366;
 }
 .whatapp-icons:hover {
-  color: #128C7E;
+  color: #128c7e;
 }
-.call-icon{
+.call-icon {
   position: fixed;
   right: 20px;
   bottom: 150px;
@@ -790,7 +790,7 @@ h6 {
   justify-content: center;
   padding: 20px;
 }
-.call-icon:hover{
+.call-icon:hover {
   color: var(--contrast-color);
   background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
@@ -2103,8 +2103,8 @@ section,
   font-weight: 500;
   border: 1px solid #d5c1e2;
 }
-.google-rating{
-  color: #FBBC05;
+.google-rating {
+  color: #fbbc05;
   margin: 0 10px;
 }
 .form-container {
@@ -2219,12 +2219,12 @@ section,
   margin-bottom: 0;
 }
 
-.illustration-text-2{
+.illustration-text-2 {
   font-size: 13px;
   margin: 6px 0 0 0;
 }
 
-.illustration-date{
+.illustration-date {
   font-size: 20px;
   font-weight: 700;
 }
@@ -2331,9 +2331,16 @@ section,
     animation: fadeUp 0.9s forwards 0s;
   }
   .illustration-text {
-    margin-top: 90%;
+    margin-top: 80%;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.5  rem;
+    padding: 10px 3vh;
+  }
+  .illustration-text-2 {
+    padding: 0 3vh;
+  }
+
+  .illustration-date {
     padding: 0 3vh;
   }
   .form-container {
@@ -2342,13 +2349,5 @@ section,
   }
   .form-illustration-container {
     flex-direction: column;
-  }
-}
-@media (max-width: 530px) {
-  .illustration-text {
-    margin-top: 90%;
-    font-weight: bold;
-    font-size: 1.7rem;
-    padding: 0 3vh;
   }
 }
