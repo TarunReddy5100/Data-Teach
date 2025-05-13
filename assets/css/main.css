@@ -2116,7 +2116,7 @@ section,
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 1s forwards 0.1s;
-  width: 70vh;
+  width: 68vh;
 }
 .form-title {
   font-size: 1.5rem;
