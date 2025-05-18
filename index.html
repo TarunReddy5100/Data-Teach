@@ -121,99 +121,57 @@
           </div>
           <div class="form-container">
               <h3 class="form-title">Get Course Details</h3>
-              <form>
-                  <div class="row">
-                      <div class="col-md-6">
-                          <input type="text" class="form-control" placeholder="First name*" required>
-                      </div>
-                      <div class="col-md-6">
-                          <input type="text" class="form-control" placeholder="Last name*" required>
-                      </div>
-                  </div>
-                  <input type="email" class="form-control" placeholder="Email*" required>
-                  
-                  <div class="row">
-                      <div class="col-md-4">
-                          <select class="form-control">
-                              <option>(+91) India</option>
-                              <option>(+1) USA</option>
-                              <option> (+44) UK</option>
-                          </select>
-                      </div>
-                      <div class="col-md-8">
-                          <input type="tel" class="form-control" placeholder="Phone Number">
-                      </div>
-                  </div>
-                  
-                  <select class="form-control">
-                      <option>Year of Graduation*</option>
-                      <option>2025</option>
-                      <option>2024</option>
-                      <option>2023</option>
-                      <option>2022 or earlier</option>
-                  </select>
-                  
-                  <select class="form-control">
-                      <option>Work Experience Level*</option>
-                      <option>Fresher</option>
-                      <option>0-2 years</option>
-                      <option>2-5 years</option>
-                      <option>5+ years</option>
-                  </select>
-                  
-                  <button type="submit" class="btn-submit">Request a Callback</button>
-                  
-                  <p class="terms">By providing your contact details, you agree to our <a href="privacy-policy.html">Privacy policy</a>.</p>
+              <form action="forms/form-handler.php" method="POST">
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" name="first_name" placeholder="First name*" required>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" name="last_name" placeholder="Last name*" required>
+                    </div>
+                </div>
+                <input type="email" class="form-control" name="email" placeholder="Email*" required>
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <select class="form-control" name="country_code">
+                            <option value="+91">(+91) India</option>
+                            <option value="+1">(+1) USA</option>
+                            <option value="+44">(+44) UK</option>
+                        </select>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="tel" class="form-control" name="phone" placeholder="Phone Number">
+                    </div>
+                </div>
+                
+                <select class="form-control" name="graduation_year" required>
+                    <option value="">Year of Graduation*</option>
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022 or earlier">2022 or earlier</option>
+                </select>
+                
+                <select class="form-control" name="experience" required>
+                    <option value="">Work Experience Level*</option>
+                    <option value="Fresher">Fresher</option>
+                    <option value="0-2 years">0-2 years</option>
+                    <option value="2-5 years">2-5 years</option>
+                    <option value="5+ years">5+ years</option>
+                </select>
+                
+                <button type="submit" class="btn-submit">Request a Callback</button>
+                
+                <p class="terms">By providing your contact details, you agree to our <a href="privacy-policy.html">Privacy policy</a>.</p>
               </form>
+
           </div>
           
         </div>
       </div>
     </div>
     <!-- /Hero Section -->
-
-    <!-- About Section -->
-    <!-- <section id="about" class="about section my-5">
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <h2 class="about-section-heading text-center">Affordable AI Online Courses and Learning Opportunities</h2>
-
-          <div class="d-flex  justify-content-between align-items-center">
-
-            <div class="about-section-card text-center">
-              <h4 class="about-section-card-heading">Internships</h4>
-              <p>Learning top skills can bring an extra-ordinary outcome and growth  in a career.</p>
-              <a href="#">Start Now!</a>
-            </div>
-
-            <div class="about-section-card text-center">
-              <h4 class="about-section-card-heading">Workshops</h4>
-              <p>Everyone prefers to enjoy learning at their own pace & that gives a great result.</p>
-              <a href="#">Start Now!</a>
-            </div>
-
-            <div class="about-section-card text-center">
-              <h4 class="about-section-card-heading">Projects</h4>
-              <p>Experienced Engineers can assist in learning faster with their best approaches!</p>
-              <a href="#">Start Now!</a>
-            </div>
-
-            <div class="about-section-card text-center">
-              <h4 class="about-section-card-heading">CRT</h4>
-              <p>Equips Students with the skills and knowledge required for job Market.</p>
-              <a href="#">Start Now!</a>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section> --><!-- /About Section -->
 
       <img src="assets/img/DATA SCIENCE Roadmap 2025_DE (1).png" class="w-100 home-image my-5" alt="">
 
@@ -571,7 +529,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
             <div class="course-item">
               <a href="java-full-stack-development.html">
-                <img src="assets/img/courses/javaprogramming.png" class="img-fluid" alt="Java">
+                <img src="assets/img/courses/javaprogramming.jpg" class="img-fluid" alt="Java">
               </a>
               <div class="course-content">
 

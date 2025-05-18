@@ -2175,24 +2175,7 @@ section,
   color: #666;
   margin-top: 1rem;
 }
-/* .illustration {
-  right: 350px;
-  bottom: 20px;
-  width: 80vh;
-  height: 400px;
-  opacity: 0;
-  animation: fadeIn 0.9s forwards 0.9s;
-  z-index: -2;
-  background-image: url(../img/landing-page-image.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
 
-}
-.illustration-text{
-  top: 50%;
-  z-index: 1;
-} */
 .illustration {
   position: absolute;
   width: 50vh;
